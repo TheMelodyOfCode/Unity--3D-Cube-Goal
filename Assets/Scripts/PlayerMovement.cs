@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Rigidbody rb;
+    public float speed = 0.01f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +16,29 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(0,0, transform.position.z + 0.01f);
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+
+        rb.MovePosition( rb.position + (new Vector3(x, 0, z) * speed) );
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+       Debug.Log("Goal - Success" + collision.transform.name);
+        if (collision.transform.tag == "Goal")
+        {
+            Destroy(collision.gameObject);
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        Debug.Log("Player exit collision with " + collision.transform.name);
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        Debug.Log("Player stays collision with " + collision.transform.name);
+    }
+
 }
