@@ -28,17 +28,11 @@ public class PlayerMovement : MonoBehaviour
         if (collision.transform.tag == "Goal")
         {
             Destroy(collision.gameObject);
+
+            GameManager manger = FindObjectOfType<GameManager>();
+            manger.LoadNextLevel();
         }
     }
 
-    private void OnCollisionExit(Collision collision)
-    {
-        Debug.Log("Player exit collision with " + collision.transform.name);
-    }
-
-    private void OnCollisionStay(Collision collision)
-    {
-        Debug.Log("Player stays collision with " + collision.transform.name);
-    }
 
 }
