@@ -5,9 +5,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody rb;
+    public AudioSource audioSource;
+    
     public float speed = 0.01f;
     public float jumpForce = 7f;
     public bool isGrounded = true;
+
 
 
     Vector3 startPos;
@@ -34,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
+
+            audioSource.Play();
         }
     }
 
