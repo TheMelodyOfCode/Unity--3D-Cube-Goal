@@ -21,6 +21,11 @@
 
 > - For a complete list of ignored files and folders, please refer to the included .gitignore file in this repository.  
 
+### ReadyToPlay  
+> - In this folder you will find the finished Game ready to play.  
+      - Extract zip file
+      - run CubeGoal.exe
+
 ### Credits
 > - This project was inspired and guided by the exceptional work of Jannick Leismann.  
 Thanks for his invaluable contribution as the instructor of this game development course on Udemy. 
