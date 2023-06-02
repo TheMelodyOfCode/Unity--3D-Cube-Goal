@@ -30,9 +30,8 @@
 ### ReadyToPlay
 
 > - In this folder you will find the finished Game ready to play.
-
-      - Extract zip file
-      - run CubeGoal.exe
+>   - Extract zip file
+>   - run CubeGoal.exe
 
 **Controls**
 
