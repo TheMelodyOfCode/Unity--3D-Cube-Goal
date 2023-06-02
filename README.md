@@ -2,7 +2,7 @@
 
 > - In Cube Goal, you will be moving a cube through several levels.
 
-### Target fo this project
+### Target of this project was
 
 > - Basic understanding of C# language
 > - Basic understanding of Unity platform
@@ -10,6 +10,7 @@
 
 ### Contribution
 
+> - This game contains only 3 level and is still expandable
 > - I appreciate and welcome any contributions.
 
     If you found a bug or have any suggestions, feel free to create an issue or a pull request.
